@@ -1,3 +1,5 @@
+// test
+
 function MyController($scope) {
 	$scope.clock = {
 		now: new Date()
