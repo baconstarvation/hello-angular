@@ -1,6 +1,6 @@
 // an initial controller
 // create a module with a controller atop the module.
-var app = angular.module('app'. []);
+var app = angular.module('myApp', []);
 app.controller('FirstController', function($scope) {
 	$scope.counter = 0;
 	$scope.add = function(amount) { $scope.counter += amount; };
@@ -13,10 +13,3 @@ function FirstController($scope) {
 	$scope.message = "hello";
 };
 */
-
-
-
-
-
-
-
