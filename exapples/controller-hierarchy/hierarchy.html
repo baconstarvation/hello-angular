@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Controller Hierarchy Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div ng-controller="ParentController">
+		<div ng-controller="ChildController">
+			<a href="#" ng-click="sayHello()">Say Hello</a>
+		</div>
+		{{ person }}
+	</div>
+	<script type="text/javascript" src="myApp.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
