@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+		<title>Inter Chocolation (Interpolate String Template Example)</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div id="emailEditor" ng-controller="MyController">
+		<input ng-model="to"
+					type="email"
+					placeholder="Recipient" />
+		<textarea ng-model="emailBody"></textarea>
+		<div id="emailPreview">
+			<pre>__ previewText __</pre>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="myApp.js"></script>
+</body>
+</html>
