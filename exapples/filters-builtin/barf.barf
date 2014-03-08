@@ -1,0 +1,48 @@
+ARI LERNER
+ari
+123.46
+$123.00
+Date Helpers:
+
+Mar 8, 2014 3:45:32 PM
+3/8/14 3:45 PM
+Saturday, March 8, 2014
+March 8, 2014
+Mar 8, 2014
+3/8/14
+3:45:32 PM
+3:45 PM
+Month in year: March
+Short month in year: Mar
+Padded month in year: 03
+Month in year: 3
+Padded day in month: 08
+Day in month: 8
+Day in week: Saturday
+Short day in week: Sat
+Padded hour in day: 15
+Hour in day: 15
+Padded hour in am/pm: 03
+Hour in am/pm: 3
+Padded minute in hour: 45
+Minute in hour: 45
+Padded second in minute: 32
+Second in minute: 32
+Padded millisecond in second: .038
+am/pm character: PM
+4 digit representation of timezone offset: -0800
+Mar 8, 2014
+Saturday, 8, 3
+03:45:32.038
+["Lerner","Likes","Eat"]
+[{"name":"Ari","City":"San Francisco","favorite food":"Pizza"}]
+["Ari"]
+Output JSON:
+
+{ "name": "Ari", "City": "San Francisco" }
+limitTo:
+
+["a"]
+orderBy:
+
+[{"name":"Ari","status":"awake"},{"name":"Nate","status":"awake"},{"name":"Q","status":"sleeping"}]
