@@ -56,6 +56,14 @@ Errors
 If a validation fails then this property will be ture; if false, then the value has passed the input field
 formName.inputfieldName.$error
 
+input.ng-invalid {
+	border: 1px solid red;
+}
+
+input.ng-valid {
+	border: 1px solid green;
+}
+
 
 Classes for Style
 .ng-pristine {}
