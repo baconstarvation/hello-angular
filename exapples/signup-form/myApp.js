@@ -1,4 +1,7 @@
 
+// ? need var app = ?
+// when adding the .controller part, submit button doesnt work anymore. fix.
+// remember, behavior has gotta be identical with jshint portion 6 before you move on to blue.
 
 angular.module('myApp', [])
 .directive('ensureUnique', ['$http', function($http) {
@@ -19,4 +22,15 @@ angular.module('myApp', [])
       });
     }
   };
+}])
+
+.controller('signupController', ['$scope', function($scope) {
+  $scope.submitted = false;
+  $scope.signupForm = function() {
+    if ($scope.signup_form.$valid) {
+      // Submit as normal
+    } else {
+      $scope.signup_form.submitted = true;
+    }
+  }
 }]);
