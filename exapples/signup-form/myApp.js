@@ -1,4 +1,7 @@
 
+// Show Validations After Submit --
+// should work identically with JS Bin #6
+
 // ? need var app = ?
 // need a .controller before .directive?
 
