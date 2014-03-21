@@ -1,7 +1,6 @@
 
 // ? need var app = ?
-// when adding the .controller part, submit button doesnt work anymore. fix.
-// remember, behavior has gotta be identical with jshint portion 6 before you move on to blue.
+// need a .controller before .directive?
 
 angular.module('myApp', [])
 .directive('ensureUnique', ['$http', function($http) {
