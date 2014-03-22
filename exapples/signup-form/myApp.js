@@ -1,11 +1,9 @@
 
-// Show Validations After Submit --
-// should work identically with JS Bin #6
+// Show Validations Only After Blur --
+// should work identically with JS Bin #7 --- http://jsbin.com/ePomUnI/7/edit
 
-// ? need var app = ?
-// need a .controller before .directive?
 
-angular.module('myApp', [])
+var app = angular.module('myApp', [])
 .directive('ensureUnique', ['$http', function($http) {
   return {
     require: 'ngModel',
@@ -25,7 +23,6 @@ angular.module('myApp', [])
     }
   };
 }])
-
 .controller('signupController', ['$scope', function($scope) {
   $scope.submitted = false;
   $scope.signupForm = function() {
