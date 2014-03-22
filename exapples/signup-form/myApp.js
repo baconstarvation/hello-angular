@@ -2,7 +2,6 @@
 // Show Validations Only After Blur --
 // should work identically with JS Bin #7 --- http://jsbin.com/ePomUnI/7/edit
 
-
 var app = angular.module('myApp', [])
 .directive('ensureUnique', ['$http', function($http) {
   return {
@@ -23,6 +22,23 @@ var app = angular.module('myApp', [])
     }
   };
 }])
+.directive('ngFocus', [function() {
+  var FOCUS_CLASS = "ng-focused";
+  return {
+    restrict: 'A',
+    require: 'ngModel',
+    link: function(scope, element, attrs, ctrl) {
+      ctrl.$focused = false;
+      element.bind('focus', function(evt) {
+        element.addClass(FOCUS_CLASS);
+        scope.$apply(function() {ctrl.$focused = true;});
+      }).bind('blur', function(evt) {
+        element.removeClass(FOCUS_CLASS);
+        scope.$apply(function() {ctrl.$focused = false;});
+      });
+    }
+  }
+}])
 .controller('signupController', ['$scope', function($scope) {
   $scope.submitted = false;
   $scope.signupForm = function() {
@@ -33,3 +49,30 @@ var app = angular.module('myApp', [])
     }
   }
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

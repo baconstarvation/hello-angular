@@ -13,14 +13,16 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<label>Your name</label>
-			<input type="text"
+			<input 
+			  type="text"
 				placeholder="Name"
 				name="name"
 				ng-model="signup.name"
 				ng-minlength=3
-				ng-maxlength=20 required />
+				ng-maxlength=20 
+				ng-class="{error: signup_form.name.$dirty && signup_form.name.$invalid}" required />
 			<div class="error"
-					ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted">
+					ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted && !signup_form.name.$focused">
 				<small class="error"
 					ng-show="signup_form.name.$error.required">
 					Your name is required.
@@ -40,11 +42,13 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<label>Your email</label>
-			<input type="email"
+			<input 
+				type="email"
 				placeholder="Email"
 				name="email"
 				ng-model="signup.email"
-				ng-minlength=3 ng-maxlength=20 required />
+				ng-minlength=3 ng-maxlength=20
+				ng-class="{error: signup_form.email.$dirty && signup_form.email.$invalid}" required />
 			<div class="error"
 					ng-show="signup_form.email.$dirty && signup_form.email.$invalid && signup_form.submitted">
 				<small class="error"
@@ -70,13 +74,15 @@
 	<div class="row">
 	<div class="large-12 columns">
 		<label>Username</label>
-			<input type="text"
+			<input 
+			  type="text"
 				placeholder="Desired username"
 				name="username"
 				ng-model="signup.username"
 				ng-minlength=3
 				ng-maxlength=20
-				ensure-unique="username" required />
+				ensure-unique="username"
+				ng-class="{error: signup_form.username.$dirty && signup_form.username.$invalid}" required />
 			<div class="error"
 					ng-show="signup_form.username.$dirty && signup_form.username.$invalid && signup_form.submitted">
 				<small class="error"
