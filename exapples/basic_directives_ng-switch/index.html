@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
+</head>
+<body>
+
+	<div ng-controller="SomeController" ng-switch on="person.name">
+		<input type="text" ng-model="person.name" />
+		<p ng-switch-default>And the winner is</p>
+		<h1 ng-switch-when="baconstarvation">{{ person.name }}</h1>
+	</div>
+
+	<script>
+		angular.module('myApp', [])
+		.controller('SomeController', function($scope) {
+			$scope.person = {};
+		});
+	</script>
+
+</body>
+</html>
