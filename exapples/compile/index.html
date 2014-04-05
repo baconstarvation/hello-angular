@@ -1,0 +1,14 @@
+// ...
+compile: function(tEle, tAttrs, transcludeFn) {
+	var tp1E1 = angular.element('<div>' +
+		'<h2></h2>' +
+		'</div>');
+	var h2 = tp1E1.find('h2');
+	h2.attr('type', tAttrs.type);
+	h2.attr('ng-model', tAttrs.ngModel);
+	h2.val("hello");
+	tEle.replaceWith(tp1E1);
+	return function(scope, ele, attrs) {
+		// The link function
+	}
+}
