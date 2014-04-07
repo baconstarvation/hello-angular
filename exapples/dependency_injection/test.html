@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.js"></script>
+</head>
+<body>
+
+<div ng-app-"myApp">
+	<div ng-controller="MyController">
+		<button ng-click="sayHello()">Hello</button>
+	</div>
+</div>
+
+	<script>
+		angular.module('myApp', [])
+		.factory('greeter', function() {
+			return {
+				greet: function(msg) { alert(msg); }
+			}
+		})
+		.controller('MyController',
+			function($scope, greeter) {
+				$scope.sayHello = function() {
+					greeter.greet("Hello!");
+				};
+			});
+	</script>
+
+</body>
+</html>
