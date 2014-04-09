@@ -1,0 +1,15 @@
+// Example service that holds on to the
+// current_user for the lifetime of the app
+angular.module('myApp', [])
+.factory('UserService', function($http) {
+	var current_user;
+
+	return {
+		getCurrentUser: function() {
+			return current_user;
+		},
+		setCurrentUser: function(user) {
+			current_user = user;
+		}
+	}
+});
